@@ -1,6 +1,6 @@
 {
   "name": "dotbot",
-  "description": "A help ful bot for your server!",
+  "description": "A helpful multipurpose bot for your server!",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
