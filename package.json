@@ -7,6 +7,14 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "discord.js": "^11.2.1",
+    "request": "^2.88.0",
+    "wordscramble": "^5.1.21",
+    "random-words": "^1.1.0",
+    "lolspeak": "^1.4.0",
+    "randomcolor": "^0.5.3",
+    "cloudinary": "^1.13.2",
+    "qr-image": "^3.2.0",
+    "fs": "^0.0.1"
   }
 }
