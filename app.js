@@ -54,15 +54,7 @@ var trivia = {
   on: false,
 };
 
-var scramble = {
-
-};
-
-var emojisAdd = {
-  'blob1': [
-    { name: 'blobsmile', url: 'https://emojipedia-us.s3.amazonaws.com/thumbs/72/google/56/grinning-face_1f600.png' },
-  ],
-};
+var scramble = {};
 
 var cap = function(word) {
   return word.slice(0, 1).toUpperCase() + word.slice(1, word.length).toLowerCase();
