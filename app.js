@@ -793,7 +793,7 @@ const commands = {
       runIf: null,
       dm: true,
       run: function(message, args, period) {
-          message.channel.send(doge('what are you doing here');
+          message.channel.send('doge '+ doge('what are you doing here'));
       },
     },
     'roll': {
