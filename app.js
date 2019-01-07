@@ -7,6 +7,7 @@ const lolcat = require('lolspeak');
 const randomColor = require('randomcolor');
 const cloudinary = require('cloudinary');
 const qr = require('qr-image');
+const doge = require('doge');
 const fs = require("fs");
 const client = new Discord.Client();
 const embedColor = 0xe74c3c;
@@ -784,6 +785,15 @@ const commands = {
         else {
           message.channel.send(`${emojis.error} ${message.member}, Invalid input.`);
         }
+      },
+    },
+    'doge': {
+      description: 'very doge much wow',
+      usage: `${prefix}doge`,
+      runIf: null,
+      dm: true,
+      run: function(message, args, period) {
+          message.channel.send(doge('what are you doing here');
       },
     },
     'roll': {
