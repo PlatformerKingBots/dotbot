@@ -789,11 +789,22 @@ const commands = {
     },
     'doge': {
       description: 'very doge much wow',
-      usage: `${prefix}doge`,
+      usage: `${prefix}doge [text]`,
       runIf: null,
       dm: true,
       run: function(message, args, period) {
-          message.channel.send('doge '+ doge('what are you doing here'));
+        if (args[0]) {
+          var m = doge(args.join(' '));
+          message.channel.send({
+            embed: {
+              title: 'Translation complete',
+              description: doge,
+            }
+          })
+        }
+        else {
+          message.channel.send(`${emojis.error} ${message.member}, Invalid input.`);
+        }
       },
     },
     'roll': {
