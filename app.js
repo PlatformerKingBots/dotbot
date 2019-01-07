@@ -798,7 +798,7 @@ const commands = {
           message.channel.send({
             embed: {
               title: 'Translation complete',
-              description: doge,
+              description: m,
             }
           })
         }
