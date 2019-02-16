@@ -935,10 +935,10 @@ client.on('messageReactionAdd', (r, user) => {
           description: `Use the reactions to answer.`,
           color: embedColor2,
           fields: [
-            { name: `\`Category\``, value: trivia.cat['category'], inline: true, },
-            { name: `\`Difficulty\``, value: cap(trivia.cat['difficulty']), inline: true, },
-            { name: `\`Type\``, value: trivia.cat['type'] === 'boolean' ? 'True/false\n' : 'Multiple Choice\n', inline: true },
-            { name: `\`Answer\``, value: `${trivia.cat['correct_answer']} - answered by ${user.tag}`, inline: true, },
+            { name: `Category`, value: trivia.cat['category'], inline: true, },
+            { name: `Difficulty`, value: cap(trivia.cat['difficulty']), inline: true, },
+            { name: `Type`, value: trivia.cat['type'] === 'boolean' ? 'True/false\n' : 'Multiple Choice\n', inline: true },
+            { name: `Answer`, value: `${trivia.cat['correct_answer']} - answered by ${user.tag}`, inline: true, },
             { name: `Question`, value: format(trivia.cat['question']), inline: false },
           ],
         }
