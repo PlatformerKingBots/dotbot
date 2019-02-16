@@ -34,12 +34,7 @@ cloudinary.config({
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({
-    game: {
-      name: `${prefix}help`,
-      type: "PLAYING"
-    }
-  });
+  client.user.setActivity("for .help", {type: "WATCHING"});
 });
 
 const categoryDescriptions = {
