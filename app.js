@@ -459,12 +459,13 @@ const commands = {
         }
         if (member) {
           if (member.id === message.author.id) {
-            message.channel.send(`${emojis.error} ${message.member}, you can't mute yourself!`);
+            message.channel.send(`I wouldn't mute myself if I were you but ok`);
           }
-          else if (member.id === client.user.id) {
+          
+          if (member.id === client.user.id) {
             message.channel.send(`${emojis.error} ${message.member}, I can't mute myself!`);
           }
-          else {
+          else{
             if (type === 'channel') {
               try {
                 let channelCol = message.guild.channels;
