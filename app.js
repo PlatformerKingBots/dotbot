@@ -82,7 +82,9 @@ const commands = {
       run: function(message, args, period) {
         let cats = [];
         for (let i in commands) {
+          if (!commands[i].showHelp) {
           cats.push({ name: i, value: categoryDescriptions[i] + '.' });
+          }
         }
         if (period[1]) {
 
@@ -283,6 +285,27 @@ const commands = {
         }
         else {
           message.channel.send(`${emojis.error} I couldn't find that emoji.`);
+        }
+      },
+    },
+    'eval': {
+      description: 'eval',
+      usage: `${prefix}eval [stuff]`,
+      runIf: null,
+      dm: true,
+      run: function(message, args, period) {
+        if (message.author.id == '270997352939126794') {
+          try {
+          const code = args.join(" ");
+          let evaled = eval(code);
+    
+          if (typeof evaled !== "string")
+            evaled = require("util").inspect(evaled);
+    
+          message.channel.send(clean(evaled), {code:"xl"});
+        } catch (err) {
+          message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+        }
         }
       },
     },
@@ -949,6 +972,11 @@ client.on('messageReactionAdd', (r, user) => {
 
   }
 });
-
+function clean(text) {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+}
 client.login(process.env.token);
 
