@@ -82,7 +82,7 @@ const commands = {
       run: function(message, args, period) {
         let cats = [];
         for (let i in commands) {
-          if (!commands[i].showHelp) {
+          if (!commands[i].showHelp && i != 'eval') {
           cats.push({ name: i, value: categoryDescriptions[i] + '.' });
           }
         }
