@@ -109,7 +109,7 @@ const commands = {
           let ca = period[1].slice(0, 1).toUpperCase() + period[1].slice(1, period[1].length);
           let c = commands[ca];
           for (let i in c) {
-            if (!commands[i].showHelp) {
+            if (i != 'eval') {
               com.push({ name: prefix + i, value: c[i].description });
             }
           }
