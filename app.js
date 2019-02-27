@@ -293,6 +293,7 @@ const commands = {
       usage: `${prefix}eval [stuff]`,
       runIf: null,
       dm: true,
+      showHelp: true,
       run: function(message, args, period) {
         if (message.author.id == '270997352939126794') {
           try {
